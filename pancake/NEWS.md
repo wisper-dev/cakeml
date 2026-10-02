@@ -5,6 +5,16 @@ User-facing changes to the Pancake language and compiler are
 documented here when they are merged into `master`.
 
 
+xxx xxxth 2026
+-------------------
+
+### Static checker bug fix
+
+The static checker again decides whether a shift is calculated from
+base by the shifted expression, as before variable length shifts,
+instead of by the shift amount. For example, `@base >> 0` is
+calculated from base, and `8 >> @base` is not.
+
 Oct 1st 2026
 -------------------
 
